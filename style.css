@@ -1,0 +1,198 @@
+body {
+    /* background-image: url(/img/IMG-20220620-WA0016.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    background: #fceabb;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #f8b500, #fceabb);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #f8b500, #fceabb);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.carousel-item {
+    height: 60vh;
+    min-height: 350px;
+    background: no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 60%;
+    background-position: 50% 50%;
+}
+
+
+.login,
+.image {
+  min-height: 100vh;
+}
+
+
+
+
+/* DEMO GENERAL ============================== */
+.hover {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 60%;
+}
+
+.hover-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    transition: all 0.4s;
+}
+
+.hover img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.hover-content {
+    position: relative;
+    z-index: 99;
+}
+
+
+/* DEMO 1 ============================== */
+.hover-1 img {
+    width: 105%;
+    position: center;
+    top: -40%;
+    left: -5%;
+    transition: all 0.3s;
+}
+
+.hover-1-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    transition: all 0.4s;
+    opacity: 0;
+}
+
+.hover-1:hover .hover-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hover-1-description {
+    transform: translateY(0.5rem);
+    transition: all 0.4s;
+    opacity: 0;
+}
+
+.hover-1:hover .hover-1-content {
+    bottom: 2rem;
+    opacity: 1;
+}
+
+.hover-1:hover .hover-1-description {
+    opacity: 1;
+    transform: none;
+}
+
+.hover-1:hover img {
+    left: 0;
+}
+
+.hover-1:hover .hover-overlay {
+    opacity: 5;
+}
+
+
+h1 {
+    color: rgb(54, 9, 9);
+}
+
+h3 {
+    color: rgb(247, 247, 247);
+}
+
+#carouselExampleCaptions {
+    margin-top: 50px;
+}
+
+.effect-5::before{
+	position: absolute;
+	content: "";
+	z-index: -1;
+	bottom: 20px;
+	left: 8px;
+	right: 8px;
+	top: 20px;
+	background: #aaa;
+	box-shadow: 0 0 25px 10px #aaa;
+	border-radius: 10px/40px;
+}
+.effect-5::after{
+	position: absolute;
+	content: "";
+	z-index: -1;
+	bottom: 14px;
+	left: 30px;
+	right: 30px;
+	top: 14px;
+	background: #aaa;
+	box-shadow: 0 0 25px 17px #aaa;
+	border-radius: 100px/10px;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.bg-gradient-1 {
+    background: #7f7fd5;
+    background: -webkit-linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+    background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+}
+
+.bg-gradient-2 {
+    background: #654ea3;
+    background: -webkit-linear-gradient(to right, #654ea3, #eaafc8);
+    background: linear-gradient(to right, #654ea3, #eaafc8);
+}
+
+.bg-gradient-3 {
+    background: #ff416c;
+    background: -webkit-linear-gradient(to right, #ff416c, #ff4b2b);
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+}
+
+.bg-gradient-4 {
+    background: #007991;
+    background: -webkit-linear-gradient(to right, #007991, #78ffd6);
+    background: linear-gradient(to right, #007991, #78ffd6);
+}
+
+.rounded {
+    border-radius: 1rem !important;
+}
+
+.btn-demo {
+    padding: 0.5rem 2rem !important;
+    border-radius: 30rem !important;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold !important;
+}
+
+.btn-demo:hover, .btn-demo:focus {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
