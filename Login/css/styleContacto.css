@@ -16,28 +16,34 @@ body{
 
 main{
     width: 100%;
-    padding: 20px;
     margin: auto;
     margin-top: 100px;
+}
+#mensaje{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
 }
 .contenedor__Contacto{
     display: flex;
     align-items: center;
-    width: 100%;
-    max-width: 380px;
+    max-width: 450px;
     position: relative;
-    top: -185px;
-    left: 10px;
+    top: -100px;
+    left: 50px;
 
     /*La transicion del codigo JS*/
     transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
-.contenedor__Contacto form{
-    width: 100%;
-    padding: 80px 20px;
+.contenedor__Contacto {
+    width:100%;
+    padding: 40px 30px;
     background: white;
-    position: absolute;
     border-radius: 20px;
 }
 
@@ -58,7 +64,7 @@ main{
     outline: none;
 }
 
-.contenedor_Contacto form button{
+#btn_Contacto{
     padding: 10px 40px;
     margin-top: 40px;
     border: none;
@@ -68,10 +74,21 @@ main{
     cursor: pointer;
     color: white;
     outline: none;
+   
 }
 .formulario__Contacto{
     opacity: 1;
-    display: block;
 
 
+
+}
+#mapa{
+    display: flex;
+    align-items: center;
+    position:absolute;
+    top: 0px;
+    right:50px;
+    width: 50%;
+    height: 70%;
+    border: #F2F2F2;
 }
