@@ -8,8 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d46eb9322e.js" crossorigin="anonymous"></script>
 
+    
+<!--    <link rel="stylesheet" href="../asserts/css/style.css"> -->
     <link rel="stylesheet" href="../asserts/css/styleLogin.css">
-    <link rel="stylesheet" href="../asserts/css/style.css">
+    
 </head>
 <body>
 
@@ -67,39 +69,40 @@
 
                     <button type="submit" class="formulario__login">Entrar</button>
 
-                    <div id="mensaje_correcto-log" class="mensaje_correcto mensaje_oculto">
-                        <h3>Login exitoso</h3>
-                    </div>
+                    <div class="menjase_info">
+                        <div id="mensaje_correcto-log" class="mensaje_correcto mensaje_oculto">
+                            <h3>Login exitoso</h3>
+                        </div>
 
-                    <div id="mensaje_error-log" class="mensaje_error mensaje_oculto">
-                        <h3>Hay campos incorrectos en el formulario</h3>
-                        <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
+                        <div id="mensaje_error-log" class="mensaje_error mensaje_oculto">
+                            <h3>Hay campos incorrectos en el formulario</h3>
+                            <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
+                        </div>
                     </div>
-
                 </form>
 
                 <!--Registro-->
                 <form action="" class="formulario__register" id="registro_form" >
                     <h2>Registrese</h2>
-                    <input type="text" id="Nombre" placeholder="Nombre completo" name="nombre_reg" class="nombre_reg" >
+                    <input autocomplete="off" type="text" id="Nombre" placeholder="Nombre completo" name="nombre_reg" class="nombre_reg" >
                     <div id="registro_nombre" class="mensaje_oculto">
                         <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
                         <p class="mensaje__parrafo">El nombre ingresado es muy corto o tiene caracteres no permitidos</p>
                     </div>
 
-                    <input type="email" id="email" placeholder="Correo Electronico" name="email_reg" class="email_reg">
+                    <input autocomplete="off" type="email" id="email" placeholder="Correo Electronico" name="email_reg" class="email_reg">
                     <div id="registro_email" class="mensaje_oculto">
                         <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
                         <p class="mensaje__parrafo">El correo ingresado no es valido</p>
                     </div>
                     
-                    <input type="text" id="usuario_reg" placeholder="Usuario" name="usurio_reg" class="usuario_reg">
+                    <input autocomplete="off" type="text" id="usuario_reg" placeholder="Usuario" name="usurio_reg" class="usuario_reg">
                     <div id="registro_usuario" class="mensaje_oculto">
                         <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
                         <p class="mensaje__parrafo"> El usuario ingresado es muy corto o tiene caracteres no permitidos</p>
                     </div>
 
-                    <input type="password" id="password" placeholder="Contraseña" name="password_reg" class="password_reg">
+                    <input autocomplete="off" type="password" id="password" placeholder="Contraseña" name="password_reg" class="password_reg">
                     <div id="registro_password" class="mensaje_oculto">
                         <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
                         <p class="mensaje__parrafo">La constraseña ingresada es muy débil</p>
@@ -108,11 +111,11 @@
                     <button type="submit" class="formulario_register">Regístrarse</button>
 
                     <div id="mensaje_correcto-reg" class="mensaje_correcto mensaje_oculto">
-                        <h3>usuario registrado exitosamente</h3>
+                        <p>usuario registrado exitosamente<p>
                     </div>
 
                     <div id="mensaje_error-reg" class="mensaje_error mensaje_oculto">
-                        <h3>Hay campos incorrectos en el formulario</h3>
+                        <p>Hay campos incorrectos en el formulario<p>
                         <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
                     </div>
 

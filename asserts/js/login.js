@@ -3,6 +3,7 @@ var formulario_register = document.querySelector(".formulario__register");
 var contenedor_login_register = document.querySelector(".contenedor__login-register");
 var caja_trasera_login = document.querySelector(".caja__trasera-login");
 var caja_trasera_register = document.querySelector(".caja__trasera-register");
+var mensajeInfo = document.querySelector(".mensaje_info")
 
 // constantes para registrar eventos de mouse
 const inputs = document.querySelectorAll('.contenedor__login-register input');
@@ -111,8 +112,9 @@ inputs.forEach((input) =>{
 cajaRegistro.addEventListener('click', register);
 cajaLogin.addEventListener('click', iniciarSesion);
 
+//evento al presionar boton login
 btnLogin.addEventListener('submit', (e) =>{
-    e.preventDefault();
+    
 
     if(campos.correoLog && campos.passwordLog){
         
@@ -122,6 +124,7 @@ btnLogin.addEventListener('submit', (e) =>{
 
         document.getElementById('mensaje_correcto-log').classList.remove('mensaje_oculto');
         document.getElementById('mensaje_correcto-log').classList.add('mensaje_visible');
+        e.preventDefault();
     }
     else{
         document.getElementById('mensaje_correcto-log').classList.remove('mensaje_visible');
@@ -129,11 +132,12 @@ btnLogin.addEventListener('submit', (e) =>{
 
         document.getElementById('mensaje_error-log').classList.remove('mensaje_oculto');
         document.getElementById('mensaje_error-log').classList.add('mensaje_visible');
+        e.preventDefault();
     }
 });
 
+//evento al presionar boton registro
 btnRegistro.addEventListener('submit', (e) =>{
-    e.preventDefault();
 
     if(campos.nombreReg && campos.usuarioReg && campos.correoReg && campos.passwordReg){
 
@@ -143,6 +147,7 @@ btnRegistro.addEventListener('submit', (e) =>{
 
         document.getElementById('mensaje_correcto-reg').classList.remove('mensaje_oculto');
         document.getElementById('mensaje_correcto-reg').classList.add('mensaje_visible');
+        e.preventDefault();
     }
 
     else{
@@ -151,6 +156,7 @@ btnRegistro.addEventListener('submit', (e) =>{
 
         document.getElementById('mensaje_error-reg').classList.remove('mensaje_oculto');
         document.getElementById('mensaje_error-reg').classList.add('mensaje_visible');
+        e.preventDefault();
     }
 
 });
@@ -196,6 +202,7 @@ function iniciarSesion(){
         formulario_register.style.display = "none";
         caja_trasera_register.style.display = "block";
         caja_trasera_login.style.display = "none";
+        mensajeInfo.style.opacity = "1";
     }
 }
 
