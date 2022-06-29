@@ -7,7 +7,7 @@
 }
 
 body{
-    background-image: url(/asserts/img/img1.png);
+    background-image: url(../img/img1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -130,8 +130,14 @@ main{
     outline: none;
 }
 
+.mensaje_oculto{
+    display: none;
+}
 
-
+.mensaje_visible{
+    display: flex;
+    color: red;
+}
 
 .formulario__login{
     opacity: 1;
@@ -141,6 +147,30 @@ main{
     display: none;
 }
 
+.mensaje__parrafo{
+    padding-left: 6px;
+}
+
+.ajuste_icono{
+    padding-top: 3px;
+    padding-left: 3px;
+}
+
+.mensaje_correcto{
+    padding-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff6308;
+}
+
+.mensaje_error{
+    padding-top: 20px;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: red;
+}
 
 
 @media screen and (max-width: 850px){
