@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login y Register </title>
-
+    <script src="https://kit.fontawesome.com/d46eb9322e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 
@@ -14,7 +14,7 @@
 
         <main>
 
-            <div class="contenedor__todo">
+            <div class="contenedor__todo" id="contenedor_todo">
                 <div class="caja__trasera">
                     <div class="caja__trasera-login">
                         <h3>¿Ya tienes una cuenta?</h3>
@@ -31,27 +31,78 @@
                 <!--Formulario de Login y registro-->
                 <div class="contenedor__login-register">
                     <!--Login-->
-                    <form action="" class="formulario__login">
+                    <form action="" class="formulario__login" id="formulario__login">
                         <h2>Iniciar Sesión</h2>
-                        <input type="email" placeholder="Correo Electronico" required>
-                        <input type="password" placeholder="Contraseña" required>
-                        <button>Entrar</button>
+                        <input autocomplete="off" type="email" placeholder="Correo Electronico" name="email_log" class="email_log">
+                        <div id="login_email" class="mensaje_oculto">
+                            <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
+                            <p class="mensaje__parrafo">El correo ingresado no es valido</p>
+                        </div>
+
+                        <input autocomplete="off" type="password" placeholder="Contraseña" name="password_log" class="password_log">
+                        <div id="login_password" class="mensaje_oculto">
+                            <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
+                            <p class="mensaje__parrafo">Debe ingresar una contraseña</p>
+                        </div>
+
+                        <button type="submit" class="formulario__login">Entrar</button>
+
+                        <div id="mensaje_correcto-log" class="mensaje_correcto mensaje_oculto">
+                            <h3>Login exitoso</h3>
+                        </div>
+
+                        <div id="mensaje_error-log" class="mensaje_error mensaje_oculto">
+                            <h3>Hay campos incorrectos en el formulario</h3>
+                            <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
+                        </div>
+
                     </form>
 
-                    <!--Register-->
-                    <form action="" class="formulario__register">
-                        <h2>Regístrarse</h2>
-                        <input type="text" id="Nombre" placeholder="Nombre completo" required>
-                        <input type="email" id="Email" placeholder="Correo Electronico" required>
-                        <input type="text" id="Usuario" placeholder="Usuario" required>
-                        <input type="password" id="Contraseña" placeholder="Contraseña" required>
-                        <button>Regístrarse</button>
+                    <!--Registro-->
+                    <form action="" class="formulario__register" id="registro_form" >
+                        <h2>Registrese</h2>
+                        <input type="text" id="Nombre" placeholder="Nombre completo" name="nombre_reg" class="nombre_reg" >
+                        <div id="registro_nombre" class="mensaje_oculto">
+                            <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
+                            <p class="mensaje__parrafo">El nombre ingresado es muy corto o tiene caracteres no permitidos</p>
+                        </div>
+
+                        <input type="email" id="email" placeholder="Correo Electronico" name="email_reg" class="email_reg">
+                        <div id="registro_email" class="mensaje_oculto">
+                            <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
+                            <p class="mensaje__parrafo">El correo ingresado no es valido</p>
+                        </div>
+                        
+                        <input type="text" id="usuario_reg" placeholder="Usuario" name="usurio_reg" class="usuario_reg">
+                        <div id="registro_usuario" class="mensaje_oculto">
+                            <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
+                            <p class="mensaje__parrafo"> El usuario ingresado es muy corto o tiene caracteres no permitidos</p>
+                        </div>
+
+                        <input type="password" id="password" placeholder="Contraseña" name="password_reg" class="password_reg">
+                        <div id="registro_password" class="mensaje_oculto">
+                            <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
+                            <p class="mensaje__parrafo">La constraseña ingresada es muy débil</p>
+                        </div>
+
+                        <button type="submit" class="formulario_register">Regístrarse</button>
+
+                        <div id="mensaje_correcto-reg" class="mensaje_correcto mensaje_oculto">
+                            <h3>usuario registrado exitosamente</h3>
+                        </div>
+
+                        <div id="mensaje_error-reg" class="mensaje_error mensaje_oculto">
+                            <h3>Hay campos incorrectos en el formulario</h3>
+                            <i id="usuario_reg-ico" class="fa-regular fa-circle-xmark ajuste_icono"></i>
+                        </div>
+
                     </form>
                 </div>
             </div>
 
         </main>
 
-        <script src="js/login.js"></script>
+        <script src="js/login.js"></script>-->
+<!--       <script src="js/validaciones.js"></script>--> 
 </body>
 </html> 
