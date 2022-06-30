@@ -96,6 +96,15 @@ main{
     margin: auto;
     padding: auto;
 }
+
+.contenedor_vista{
+padding-top: 100px ;
+}
+
+.contenedor_mapa{
+    padding-top: 40px;
+}
+
 #mensaje{
     width: 100%;
     margin-top: 20px;
