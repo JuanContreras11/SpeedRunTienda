@@ -18,7 +18,7 @@ jQuery.validator.addMethod("nombre", function(value, element) {
 
 $(document).ready(function() {
     formulario.validate({
-        errorClass: "no-valido",
+        errorClass: "no_valido",
         rules:{
             nombre: {
                 required: true,

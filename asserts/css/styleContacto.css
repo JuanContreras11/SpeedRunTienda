@@ -157,9 +157,9 @@ main{
     border: #F2F2F2;
 }
 
-.no-valido{
+.no_valido{
     color:red;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .mensaje-exitoso{

@@ -252,10 +252,10 @@ main{
     opacity: 1;
 }
 
-.mensaje_error{
+.no_valido{
     padding-top: 20px;
     font-size: 15px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
     color: red;
     opacity: 1;
