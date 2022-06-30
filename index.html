@@ -254,15 +254,47 @@
 
         </div>
 
-        <!-- Page Content -->
-        <section class="py-5">
-            <div class="container">
-                <h1 class="fw-light">Half Page Image Slider</h1>
-                <p class="lead">The background images for the slider are set directly in the HTML using inline CSS. The
-                    images
-                    in this snippet are from <a href="https://unsplash.com">Unsplash</a>!</p>
+         <!-- FOOTER -->
+    <footer class="w-100 pt-4 flex-shrink-0">
+        <div class="container py-4">
+            <div class="row gy-4 gx-5 pt-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="h1 text-white">FB.</h5>
+                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="#">Bootstrapious.com</a></p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Quick links</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Get started</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Quick links</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Get started</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white mb-3">Newsletter</h5>
+                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    <form action="#">
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="text" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <button class="btn btn-primary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </section>
+        </div>
+    </footer>
+</div>
 
 
     </section>
@@ -271,10 +303,15 @@
 
 
     <script>
-        window.addEventListener('scroll', function(){
-  var header = document.querySelector('header');
-  header.classList.toggle('sticky', window.scrollY > 0);
-});
+       if (screen.width < 1000) {
+            var header = document.querySelector('header');
+            header.classList.toggle('sticky',);
+            document.getElementById('carouselExampleIndicators').remove();
+        } else
+            window.addEventListener('scroll', function () {
+                var header = document.querySelector('header');
+                header.classList.toggle('sticky', true);
+            });
     </script>
 
     <!-- Bootstrap JavaScript Libraries -->
