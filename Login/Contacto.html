@@ -6,30 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="/asserts/css/styleContacto.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <script src="../asserts/js/jquery/jquery.min.js"></script>
+    <script src="../asserts/js/jquery/jquery.validate.min.js"></script>
+    <script scr="../asserts/js/contacto.js"></script>
+
 </head>
 
 <body>
 
     <header>
 
-        <img src="/asserts/img/1.webp" class="banner">
+        <img src="../asserts/img/1.webp" class="banner">
 
-        <a href="/index.html" class="logo">SpeedRun</a>
+        <a href="../index.html" class="logo">SpeedRun</a>
 
 
         <nav>
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/Login/Login.html">Login</a></li>
-                <li><a href="/Login/Contacto.html">Contacto</a></li>
-
-
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Login/Login.html">Login</a></li>
+                <li><a href="../Login/Contacto.html">Contacto</a></li>
             </ul>
         </nav>
 
@@ -74,19 +75,22 @@
                 <div class="col-lg-4 mb-3 mb-lg-0 mt-5">
                     <div class="contenedor__Contacto mt-5">
                         <main>
-                            <form action="" class="formulario__Contacto">
+                            <form action="" id="formulario__Contacto" class="formulario__Contacto">
                                 <h2>Contacto</h2>
-                                <input type="text" placeholder="Nombre del Usuario" required>
-                                <input type="email" placeholder="Correo Electronico" required>
-                                <input type="tel" placeholder="Telefono" required>
-                                <textarea id="mensaje" placeholder="Mensaje"></textarea>
-                                <button id="btn_Contacto">Enviar</button>
+                                <input type="text" placeholder="Nombre del Usuario" name="nombre">
+                                <input type="text" placeholder="Correo Electronico" name="correo">
+                                <input type="text" placeholder="Telefono" name="telefono">
+                                <textarea id="mensaje" placeholder="Mensaje" name="mensaje"></textarea>
+                                <div><button id="btn_Contacto" type="submit">Enviar</button></div>
+                                <div class="mensaje-exitoso oculto"><p>Su mensaje se ha enviado exitosamente</p></div>
                             </form>
                         </main>
                     </div>
                     
                 </div>
             </div>
+
+            <script src="../asserts/js/contacto.js"></script>
             <!-- DEMO 1 Item-->
             <div class="col-lg-6">
                 <div class="hover hover-1 text-white rounded"><img
@@ -103,7 +107,6 @@
         </div>
     </div>
 
-    </div>
 
 
 

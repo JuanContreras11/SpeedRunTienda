@@ -149,13 +149,30 @@ main{
 }
 .formulario__Contacto{
     opacity: 1;
-
-
-
 }
 #mapa{
     display: flex;
     align-items: center;
     position:absolute;
     border: #F2F2F2;
+}
+
+.no-valido{
+    color:red;
+    font-size: 20px;
+}
+
+.mensaje-exitoso{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 20px;
+    color:#f83e05;
+}
+
+.oculto{
+    display:none;
+}
+
+.visible{
+    display:block;
 }
