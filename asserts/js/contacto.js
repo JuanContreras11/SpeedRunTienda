@@ -16,10 +16,7 @@ jQuery.validator.addMethod("nombre", function(value, element) {
     return this.optional( element ) || /^[a-zA-ZÀ-ÿ\s]{1,40}$/.test( value );
 }, 'Ingrese su nombre');  
 
-
-//jquery
-$(document).ready(function(){
-
+$(document).ready(function() {
     formulario.validate({
         errorClass: "no-valido",
         rules:{
@@ -44,7 +41,6 @@ $(document).ready(function(){
                 minlength: 8
             }
         },
-        debug: true,
         messages:{
             nombre:{
                 required: "Por favor, ingrese su nombre",
@@ -65,39 +61,22 @@ $(document).ready(function(){
                 required: "Ingrese una consulta",
                 minlength: "Su consulta es muy corta"
             }
+        },
+        submitHandler: function(form) {
+        form.submit();
+        alert("Su consulta ha sido enviada");
         }
-
     });
-});
-
-
-//ultima validacion antes de enviar
-enviar.addEventListener('submit', (e) =>{
-    e.preventDefault();
-
-    if(formulario.valid()){
-        console.log("El usuario ingreso todos los datos");
-
-        //parte temporal ya que regresa la pagina al estado inicial
-        //enviar.reset();
-        
-        $('.mensaje-exitoso').removeClass('oculto');
-        $('.mensaje-exitoso').addClass('visible');
-
-        //enviar.reset();
-        var formCajas =$('.formulario__Contacto').validate();
-
-        formCajas.resetForm();
-
-        //formularioInputs.resetForm();
-
-        //hasta que le indiquemos una direccion
-        //$(location).prop('href', 'contacto.html');
-    }
-    else{
-        console.log("Faltan datos");
-    }
 
 });
 
+
+
+//comportamiento boton solo con jquery
+/*
+$("#btn_Contacto").click(function(event){
+    alert("Su consulta ha sido enviada");
+    $('#formulario__Contacto').submit();
+    $("#formulario__Contacto").trigger("reset");
+}); */
 
