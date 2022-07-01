@@ -10,9 +10,6 @@ $(document).ready(function () {
 
     success: function (data) {
 
-
-
-
       var dolar = data.Dolares[0].Valor;
       console.log(dolar);
 

@@ -26,7 +26,7 @@
 
         <img src="/asserts/img/1.webp" class="banner">
 
-        <a href="/index.html" class="logo">SpeedRun</a>
+        <a href="/index.html" id="logo_id" class="logo">SpeedRun</a>
 
 
         <nav>
@@ -45,10 +45,6 @@
 
 
     <section id="section">
-
-
-
-
 
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -76,11 +72,6 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-
-
-
-
-
 
 
 
@@ -306,6 +297,7 @@
        if (screen.width < 1000) {
             var header = document.querySelector('header');
             header.classList.toggle('sticky',);
+            document.getElementById('logo_id').remove();
             document.getElementById('carouselExampleIndicators').remove();
         } else
             window.addEventListener('scroll', function () {

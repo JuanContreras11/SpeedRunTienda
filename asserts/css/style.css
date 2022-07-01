@@ -294,4 +294,10 @@ body {
     background: rgba(255, 255, 255, 0.5);
 }
 
+.visible{
+    display:none;
+}
 
+@media (max-width <=800px){
+    
+}
