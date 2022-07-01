@@ -74,6 +74,12 @@
     </main>
 
     <script src="../asserts/js/loginjQuery.js"></script>
-    <script src="../asserts/js/navbar.js"></script>
+    <script>
+        if (screen.width < 1000) {
+            const logo = document.getElementById('logo_id');
+            logo.remove();
+        } else
+            { };
+    </script>
 </body>
 </html> 
