@@ -18,7 +18,7 @@
                 <div class="card-header">
                     <div class="row">
                         <div class="col-3">
-                            <h4>Listar Zapatillas</h4>
+                            <h4>Nuestro Catálogo</h4>
                         </div>
                         <div class="col-3">
                             <a name="" id="" type="button" class="btn btn-warning" href="{% url 'agregarInventario' %}" role="Buttom">Agregar zapatilla</a>
@@ -34,23 +34,27 @@
                             <th scope="col">Modelo</th>
                             <th scope="col">Talla</th>
                             <th scope="col">Color</th>
-                            <th scope="col">Precio</th>
+                            <th scope="col">Género</th>
+                            <th scope="col">Precio (US$)</th>
                             <th scope="col">Acciones</th>
                         </tr>
                         </thead>
 
                         <tbody>
+                        {% for var in zapatillas %}    
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>@mdo</td>
+                            <th>{{ var.idZapatilla }}</th>
+                            <td>{{ var.modelo }}</td>
+                            <td>{{ var.talla }}</td>
+                            <td>{{ var.color }}</td>
+                            <td>{{ var.genero }}</td>
+                            <td>{{ var.precio }}</td>
                             <td> 
-                                <a type="button" class="btn btn-secondary" href="{% url 'editarInventario' %}">Editar</a>
-                                <a type="button" class="btn btn-danger">borrar</a>
-                            </td>
+                                <a type="button" class="btn btn-secondary" href="{% url 'editarinventario' var.idZapatilla %}">Editar</a>
+                                <a type="button" class="btn btn-danger" href="{% url 'eliminarinventario' var.idZapatilla %}">Eliminar</a>
+                            </td>    
                         </tr>
+                        {% endfor %}
                         </tbody>
                     </table>
                 </div>

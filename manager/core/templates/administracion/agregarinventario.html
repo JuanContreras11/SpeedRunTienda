@@ -14,18 +14,25 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h4>Agregar inventario</h4>
+                <h4>Añadir al catalogo</h4>
             </div>
             <div class="card-body">
-                <h4 class="card-title">Zapatilla</h4>
+                <h4 class="card-title">Descripcion zapatilla</h4>
 
                 <form enctype="multipart/form-data" method="post">
+                    {% csrf_token %} <!--Token de verificacion-->
+                    {% for campo in formulario %}
                     <div class="mb-3">
-                        <label for="" class="form-label">Nombre:</label>
-
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Nombre">
+                        <label for="" class="form-label">{{ campo.label }}:</label>
+                        <!--obtenemos el tipo de dato del campo-->
+                        <input type="{{ campo.field.widget.input_type }}" class="form-control" 
+                        name="{{ campo.name}}" id="" aria-describedby="helpId" 
+                        placeholder="{{ campo.label }}">
                     </div>
-
+                    <!--Muestra los errores de validacion-->
+                    <div class="col-12 help-text">{{ campo.errors }}</div>
+                    {% endfor %}
+                    <input name="" id="" class="btn btn-success" type="submit" value="Enviar información"></a>
                 </form>
 
             </div>

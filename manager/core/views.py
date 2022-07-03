@@ -1,7 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-# Create your views here.
+#indicamos desde que modelos recibiremos la informacion
+from .models import zapatilla
+from .forms import zapatillaForm
+
+# Definimos las vistas y su ubicacion
 
 def index(request):
     return render(request, 'index.html')
@@ -13,13 +17,28 @@ def contacto(request):
     return render(request, 'contacto.html')
 
 def inventario(request):
-    return render(request, 'administracion/inventario.html')
+    zapatillas = zapatilla.objects.all() #recibo en un objeto todos los atributos del modelo zapatilla
+    return render(request, 'administracion/inventario.html', {'zapatillas': zapatillas}) # se le pasa el objeto a la variable en la vista
 
 def agregarInventario(request):
-    return render(request, 'administracion/agregarinventario.html')
+    formulario = zapatillaForm(request.POST or None, request.FILES or None)
+    if formulario.is_valid():
+        formulario.save()
+        return redirect('inventario')
+    return render(request, 'administracion/agregarinventario.html', {'formulario': formulario})
 
-def editarInventario(request):
-    return render(request, 'administracion/editarinventario.html')
+def editarInventario(request, id):
+    zapatillas = zapatilla.objects.get(idZapatilla=id) #consulta de la zapatilla por get
+    formulario = zapatillaForm(request.POST or None, request.FILES or None, instance=zapatillas) #le damos el id al formulario
+    if formulario.is_valid() and request.POST: 
+        formulario.save()
+        return redirect('inventario')
+    return render(request, 'administracion/editarinventario.html', {'formulario': formulario})
+
+def eliminarInventario(request, id): #se debe solicitar el id
+    zapatillas = zapatilla.objects.get(idZapatilla=id)
+    zapatillas.delete()
+    return redirect('inventario')
         
 def personal(request):
     return render(request, 'administracion/personal.html')
