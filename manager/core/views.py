@@ -7,7 +7,10 @@ def index(request):
     return render(request, 'index.html')
 
 def login(request):
-    return render(request, 'Login.html')
+    return render(request, 'login.html')
 
 def contacto(request):
-    return render(request, 'Contacto.html')
+    return render(request, 'contacto.html')
+
+def page01(request):
+    return render(request, '1.html')

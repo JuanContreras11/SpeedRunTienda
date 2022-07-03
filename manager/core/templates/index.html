@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -28,14 +28,14 @@
 
         <img src="{% static '../static/asserts/img/1.webp' %}" class="banner">
 
-        <a href="index" id="logo_id" class="logo">SpeedRun</a>
+        <a href="{% url 'index' %}" id="logo_id" class="logo">SpeedRun</a>
 
 
         <nav>
             <ul>
-                <li><a href="{% static '/index.html' %}">Home</a></li>
-                <li><a href="{% static '/Login/Login.html' %}">Login</a></li>
-                <li><a href="{% static '/Login/Contacto.html' %}">Contacto</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
                 
 
             </ul>
@@ -89,7 +89,7 @@
 
 
                 <div class="col-lg-3 col-md-4 col-6 pt-4">
-                    <a href="{% static '/html/1.html' %}">
+                    <a href="{% url 'page01' %}">
                         <div class="hover hover-1 text-white rounded"><img src="{% static '../static/asserts/img/1.webp' %}" alt="">
                             <div class="hover-overlay"></div>
                             <div class="hover-1-content px-5 py-4">
