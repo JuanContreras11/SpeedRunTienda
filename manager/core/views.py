@@ -12,12 +12,24 @@ def login(request):
 def contacto(request):
     return render(request, 'contacto.html')
 
+def inventario(request):
+    return render(request, 'administracion/inventario.html')
+
+def agregarInventario(request):
+    return render(request, 'administracion/agregarinventario.html')
+
+def editarInventario(request):
+    return render(request, 'administracion/editarinventario.html')
+        
+def personal(request):
+    return render(request, 'administracion/personal.html')
+
 def page01(request):
     return render(request, 'html/1.html')
 
 def page02(request):
     return render(request, 'html/2.html')
-    
+
 def page03(request):
     return render(request, 'html/3.html')
 

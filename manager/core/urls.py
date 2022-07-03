@@ -1,11 +1,15 @@
 from django.urls import path
-from . import views
-from .views import index, login, contacto, page01
+from . import views  #importa todas las vistas en views.py
+from .views import index, login, contacto
 
 urlpatterns =[
     path('', index, name='index'),
     path('login/', login, name='login'),
     path('contacto/', contacto, name='contacto'),
+    path('inventario/', views.inventario, name='inventario'),
+    path('inventario/agregar', views.agregarInventario, name='agregarInventario'),
+    path('inventario/editar', views.editarInventario, name='editarInventario'),
+    path('rrhh/', views.personal, name='personal'),
     path('zapatillas/', views.page01, name='page01'),
     path('zapatillas/', views.page01, name='page02'),
     path('zapatillas/', views.page01, name='page03'),
@@ -17,5 +21,5 @@ urlpatterns =[
     path('zapatillas/', views.page01, name='page09'),
     path('zapatillas/', views.page01, name='page10'),
     path('zapatillas/', views.page01, name='page11'),
-    path('zapatillas/', views.page01, name='page12'),
+    path('zapatillas/', views.page01, name='page12')
 ]
