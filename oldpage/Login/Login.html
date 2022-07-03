@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Register </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d46eb9322e.js" crossorigin="anonymous"></script>
+    <script src="../asserts/js/jquery/jquery.min.js"></script>
+    <script src="../asserts/js/jquery/jquery.validate.min.js"></script>
+    
+    <link rel="stylesheet" href="../asserts/css/styleLogin.css">
+    
+</head>
+<body>
+
+    <header>
+        <img src="/asserts/img/1.webp" class="banner">
+        <a href="/index.html" id="logo_id" class="logo">SpeedRun</a>
+
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Login/Login.html">Login</a></li>
+                <li><a href="/Login/Contacto.html">Contacto</a></li>
+            </ul>
+    </header>
+
+
+    <main>
+        <div class="contenedor__todo" id="contenedor_todo">
+            <div class="caja__trasera">
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para que puedas iniciar sesión</p>
+                    <button id="btn__registrarse">Regístrarse</button>
+                </div>
+            </div>
+
+            <!--Formulario de Login y registro-->
+            <div class="contenedor__login-register">
+                <!--Login-->
+                <form action="" class="formulario__login" id="formulario__login">
+                    
+                    <div>
+                    <h2>Iniciar Sesión</h2>    
+                    <input autocomplete="on" type="text" placeholder="Correo Electronico" name="email_log" class="email_log">
+                    <input autocomplete="off" type="password" placeholder="Contraseña" name="password_log" class="password_log">
+                    </div>
+                    <button type="submit" class="formulario__login">Entrar</button>
+
+                </form>
+
+                <!--Registro-->
+                <form action="" class="formulario__register" id="registro_form" >
+                    <div>
+                    <h2>Registrese</h2>
+                    <input autocomplete="on" type="text" id="Nombre" placeholder="Nombre completo" name="nombre_reg" class="nombre_reg" >
+                    <input autocomplete="on" type="text" id="email" placeholder="Correo Electronico" name="email_reg" class="email_reg">
+                    <input autocomplete="on" type="text" id="usuario_reg" placeholder="Usuario" name="usuario_reg" class="usuario_reg">
+                    <input autocomplete="off" type="password" id="password" placeholder="Contraseña" name="password_reg" class="password_reg">
+                    </div>
+                    <button type="submit" class="formulario_register">Registrarse</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../asserts/js/loginjQuery.js"></script>
+    <script>
+        if (screen.width < 1000) {
+            const logo = document.getElementById('logo_id');
+            logo.remove();
+        } else
+            { };
+    </script>
+</body>
+</html> 
