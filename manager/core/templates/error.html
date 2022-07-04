@@ -1,0 +1,38 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '../static/asserts/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static '../static/asserts/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '../static/asserts/css/styleprime.css' %}">
+    <script src="{% static '../static/asserts/bootstrap/js/bootstrap.min.js' %}"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body id="fondoimagen">
+    <header>
+        <img src="{% static '../static/asserts/img/1.webp' %}" class="banner">
+        <a href="{% url 'index' %}" id="logo_id" class="logo">SpeedRun</a>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+            </ul>
+    </header>
+    <div id="cajaFormulario">
+        <div class="container">
+            <a type="button" class="btn btn-danger" href="{% url 'index' %}">
+                <div>
+                    <h1 style="color:white; font-size:60px;">El calzado solicitado</h1>
+                    <h1 style="color:white; font-size:60px;">ya no se encuentra disponible</h1>
+                    <h1 style="color:white; font-size:60px;">Lo sentimos</h1>
+                </div>        
+            </a>
+        </div>
+    </div>
+</body>
+</html>

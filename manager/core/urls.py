@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views  #importa todas las vistas en views.py
-from .views import index, login, contacto, gestion
+from .views import index, login, contacto, gestion, error
 
 #importamos las vistas e indicamos como se visualizaran en el sitio
 urlpatterns =[
@@ -9,6 +9,7 @@ urlpatterns =[
     path('login/', login, name='login'),
     path('contacto/', contacto, name='contacto'),
     path('gestion/', gestion, name='gestion'),
+    path('error/', error, name='error'),
 
     #vistas CRUD  inventario
     path('inventario/', views.inventario, name='inventario'),
@@ -37,5 +38,6 @@ urlpatterns =[
     path('estilo/page10', views.page10, name='page10'),
     path('estilo/page11', views.page11, name='page11'),
     path('estilo/page12', views.page12, name='page12'),
+    path('estilo/page13', views.page13, name='page13'),
 
 ]
