@@ -106,35 +106,35 @@
                                 
 
 
-                                <p class="text-muted mb-4"><h1>Calzado Unisex <br></h1><br><br>
-                                   <h1>Adidas Ultra Bootstrap 4.0 DNA<br></h1> <br><br>
-                                    </p>
-
-
-                                    <div class="rounded bg-gradient-3 text-white shadow p-4 text-center mb-5">
-                                        <p>El precio de importacion es de:</p>
-                                        <div class="d-flex justify-content-center"> <p > $</p><p id="precio">145 dolares</p>
-                                        </div>
-                                        
-                                        <div class="rounded bg-warning text-dark shadow  text-center " id="cuadrito">  
-                                            <p class="mb-0 font-weight-bold " id="heroInfo"></p>
-                                            </div>
-
-                                        
-                                    </p>
-                                    </div>
-
-                                    <div class="rounded bg-gradient-3 text-white shadow p-1 text-center mb-5 ">
-                                        <p>El precio final en pesos Chilenos es de: </p>
-                                        <div class="d-flex justify-content-center"> <p > $</p><p id="final"></p>
-                                        </div>
-                                       
-                                        
-                                        
-
-                                        
-                                    </p>
-                                    </div>
+                                <p class="text-muted mb-4"><h1>Calzado {{ formulario.genero.value }}<br></h1><br><br>
+                                    <h1>{{ formulario.modelo.value }} <br></h1> <br><br>
+                                     </p>
+ 
+ 
+                                     <div class="rounded bg-gradient-3 text-white shadow p-4 text-center mb-5">
+                                         <p>El precio de importacion es de:</p>
+                                         <div class="d-flex justify-content-center"> <p >US$</p><p id="precio">{{ formulario.precio.value }}</p>
+                                         </div>
+                                         
+                                         <div class="rounded bg-warning text-dark shadow  text-center " id="cuadrito">  
+                                             <p class="mb-0 font-weight-bold " id="heroInfo"></p>
+                                             </div>
+                                     </p>
+                                     </div>
+ 
+                                     <div class="rounded bg-gradient-3 text-white shadow p-1 text-center mb-5 ">
+                                         <p>El precio final en pesos Chilenos es de: </p>
+                                         <div class="d-flex justify-content-center"> <p > $</p><p id="final"></p>
+                                         </div> 
+                                     </p>
+                                     </div>
+ 
+                                     <div class="rounded bg-gradient-3 text-white shadow p-1 text-center mb-5 ">
+                                         <p>Tallas disponibles: </p>
+                                         <div class="d-flex justify-content-center"> <p > {{ formulario.talla.value }}</p><p ></p>
+                                         </div> 
+                                     </p>
+                                     </div>
                                 
                             </div>
                         </div>
