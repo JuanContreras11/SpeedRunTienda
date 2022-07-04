@@ -1,0 +1,46 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '../static/asserts/bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static '../static/asserts/bootstrap/js/bootstrap.min.js' %}"></script>
+    <title>Añadir Persona</title>
+</head>
+<body> 
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h4>Añadir una persona al registro</h4>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">Datos personales</h4>
+
+                <form enctype="multipart/form-data" method="post">
+                    {% csrf_token %} <!--Token de verificacion-->
+                    {% for campo in formulario %}
+                    <div class="mb-3">
+                        <label for="" class="form-label">{{ campo.label }}:</label>
+                        <!--obtenemos el tipo de dato del campo-->
+                        <input type="{{ campo.field.widget.input_type }}" class="form-control" 
+                        name="{{ campo.name}}" id="" aria-describedby="helpId" 
+                        placeholder="{{ campo.label }}">
+                    </div>
+                    <!--Muestra los errores de validacion-->
+                    <div class="col-12 help-text">{{ campo.errors }}</div>
+                    {% endfor %}
+                    <input name="" id="" class="btn btn-success" type="submit" value="Enviar información"></a>
+                    <a name="" id="" class="btn btn-primary" href="{% url 'personal' %}" role="button">Cancelar</a>
+                </form>
+
+            </div>
+            <div class="card-footer text-muted">
+
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

@@ -5,12 +5,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static '../static/asserts/bootstrap/css/bootstrap.min.css' %}">
+    <script src="{% static '../static/asserts/bootstrap/js/bootstrap.min.js' %}"></script>
+    <title>Personal</title>
 </head>
 <body>
-    
-    <h1>RECURSOS HUMANOS</h1>
+        <div class="container">
 
+            <!--Tabla de bootstrap para listar inventario-->
+            <div class="card">
 
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-3">
+                            <h4>Administracion de personal</h4>
+                        </div>
+                        <div class="col-3">
+                            <a name="" id="" type="button" class="btn btn-warning" href="{% url 'agregarPersonal' %}" role="Buttom">Agregar Persona</a>
+                        </div>
+                    </div>
+                </div>    
+                <div class="card-body">
+                    <table class="table table-hover">
+
+                        <thead class="thead-light">
+                        <tr>
+                            <th class="text-center" scope="col ">ID</th>
+                            <th class="text-center" scope="col">RUT</th>
+                            <th class="text-center" scope="col">Nombre</th>
+                            <th class="text-center" scope="col">Apellido Paterno</th>
+                            <th class="text-center" scope="col">Apellido Materno</th>
+                            <th class="text-center" scope="col">Fecha Nacimiento</th>
+                            <th class="text-center" scope="col">Dirección</th>
+                            <th class="text-center" scope="col">Comúna</th>
+                            <th class="text-center" scope="col">Teléfonos</th>
+                            <th class="text-center" scope="col">Acciones</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        {% for var in personal %}    
+                        <tr>
+                            <th class="text-center">{{ var.idPersona }}</th>
+                            <td class="text-center">{{ var.rut }}</td>
+                            <td class="text-center">{{ var.nombre }}</td>
+                            <td class="text-center">{{ var.apellidoP }}</td>
+                            <td class="text-center">{{ var.apellidoM }}</td>
+                            <td class="text-center">{{ var.fechaNacimiento }}</td>
+                            <td class="text-center">{{ var.direccion }}</td>
+                            <td class="text-center">{{ var.comuna }}</td>
+                            <td class="text-center">{{ var.telefono }}</td>
+                            <td class="text-center"> 
+                                <a type="button" class="btn btn-secondary" href="{% url 'editarPersonal' var.idPersona %}">Editar</a>
+                                <a type="button" class="btn btn-danger" href="{% url 'removerPersonal' var.idPersona %}">Eliminar</a>
+                            </td>    
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="card-footer text-muted">
+                </div>   
+            </div> 
+        </div>
 </body>
 </html>
