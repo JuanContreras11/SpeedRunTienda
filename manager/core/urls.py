@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views  #importa todas las vistas en views.py
-from .views import index, login, contacto
+from .views import index, login, contacto, gestion
 
 #importamos las vistas e indicamos como se visualizaran en el sitio
 urlpatterns =[
@@ -8,6 +8,7 @@ urlpatterns =[
     path('', index, name='index'),
     path('login/', login, name='login'),
     path('contacto/', contacto, name='contacto'),
+    path('gestion/', gestion, name='gestion'),
 
     #vistas CRUD  inventario
     path('inventario/', views.inventario, name='inventario'),

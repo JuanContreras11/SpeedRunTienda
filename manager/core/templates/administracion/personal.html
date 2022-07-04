@@ -5,11 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <link rel="stylesheet" href="{% static '../static/asserts/bootstrap/css/bootstrap.min.css' %}">
     <script src="{% static '../static/asserts/bootstrap/js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static '../static/asserts/css/style.css' %}">
+    <link rel="stylesheet" href="{% static '../static/asserts/css/styleprime.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+    
     <title>Personal</title>
 </head>
-<body>
+
+<body id="fondoimagen">           
+    <header>
+        <img src="{% static '../static/asserts/img/1.webp' %}" class="banner">
+        <a href="{% url 'index' %}" id="logo_id" class="logo">SpeedRun</a>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a href="{% url 'gestion' %}">Admin</a></li>
+            </ul>
+    </header>
+    <div id="cajaFormulario">
         <div class="container">
 
             <!--Tabla de bootstrap para listar inventario-->
@@ -68,5 +86,6 @@
                 </div>   
             </div> 
         </div>
+    </div>    
 </body>
 </html>

@@ -3,6 +3,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; */
+
+    
     background: #fceabb;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #f8b500, #fceabb);
@@ -11,7 +13,7 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-repeat: no-repeat;
     background-attachment: fixed;
-
+    background-image: url(../img/img1.png);
 
     
 }

@@ -1,0 +1,11 @@
+#fondoimagen{
+    background-image: url(../img/img1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#cajaFormulario{
+    padding-top: 120px;
+}

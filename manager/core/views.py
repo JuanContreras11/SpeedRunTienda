@@ -18,6 +18,9 @@ def login(request):
 def contacto(request):
     return render(request, 'contacto.html')
 
+def gestion(request):
+    return render(request, 'gestion.html')
+
 #definicion y ubicacion del CRUD de INVENTARIO  
 def inventario(request):
     zapatillas = zapatilla.objects.all() #recibo en un objeto todos los atributos del modelo zapatilla

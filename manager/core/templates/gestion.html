@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static '../static/asserts/bootstrap/css/bootstrap.min.css' %}">
-    <script src="{% static '../static/asserts/bootstrap/js/bootstrap.min.js' %}"></script>
     <link rel="stylesheet" href="{% static '../static/asserts/css/style.css' %}">
     <link rel="stylesheet" href="{% static '../static/asserts/css/styleprime.css' %}">
+    <script src="{% static '../static/asserts/bootstrap/js/bootstrap.min.js' %}"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -23,19 +23,19 @@
                 <li><a href="{% url 'contacto' %}">Contacto</a></li>
                 <li><a href="{% url 'gestion' %}">Admin</a></li>
             </ul>
-    </header>   
+    </header>
     <div id="cajaFormulario">
         <div class="container">
+
             <!--Tabla de bootstrap para listar inventario-->
             <div class="card">
 
                 <div class="card-header">
                     <div class="row">
                         <div class="col-3">
-                            <h4>Nuestro Catálogo</h4>
+                            <h4>Administración</h4>
                         </div>
                         <div class="col-3">
-                            <a name="" id="" type="button" class="btn btn-warning" href="{% url 'agregarInventario' %}" role="Buttom">Agregar zapatilla</a>
                         </div>
                     </div>
                 </div>    
@@ -44,32 +44,34 @@
 
                         <thead class="thead-light">
                         <tr>
-                            <th class="text-center" scope="col">ID</th>
-                            <th class="text-center" scope="col">Modelo</th>
-                            <th class="text-center" scope="col">Talla</th>
-                            <th class="text-center" scope="col">Color</th>
-                            <th class="text-center" scope="col">Género</th>
-                            <th class="text-center" scope="col">Precio (US$)</th>
-                            <th class="text-center" scope="col">Acciones</th>
+                            <th class="text-center" scope="col">Departamento</th>
+                            <th class="text-center" scope="col">Link</th>
+
                         </tr>
                         </thead>
 
                         <tbody>
-                        {% for var in zapatillas %}    
                         <tr>
-                            <th class="text-center" >{{ var.idZapatilla }}</th>
-                            <td class="text-center" >{{ var.modelo }}</td>
-                            <td class="text-center" >{{ var.talla }}</td>
-                            <td class="text-center" >{{ var.color }}</td>
-                            <td class="text-center" >{{ var.genero }}</td>
-                            <td class="text-center" >{{ var.precio }}</td>
-                            <td class="text-center" > 
-                                <a type="button" class="btn btn-secondary" href="{% url 'editarinventario' var.idZapatilla %}">Editar</a>
-                                <a type="button" class="btn btn-danger" href="{% url 'eliminarinventario' var.idZapatilla %}">Eliminar</a>
+                            <th class="text-center" ><h4>Gestión de Inventario</h4></th>
+                            <td class="text-center" >
+                                <div class="d-grid gap-2 col-6 mx-auto">
+                                    <a type="button" class="btn btn-success" href="{% url 'inventario' %}">administrar</a>
+                                </div>
                             </td>    
                         </tr>
-                        {% endfor %}
                         </tbody>
+                        
+                        <tbody>
+                            <tr>
+                                <th class="text-center" ><h4>Recursos Humanos</h4></th>
+                                <td class="text-center" > 
+                                    <div class="d-grid gap-2 col-6 mx-auto">     
+                                        <a type="button" class="btn btn-success" href="{% url 'personal' %}">administrar</a>
+                                    </div>     
+                                </td>    
+                            </tr>
+                            </tbody>
+
                     </table>
                 </div>
                 <div class="card-footer text-muted">
