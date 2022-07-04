@@ -36,5 +36,6 @@ urlpatterns =[
     path('estilo/page09', views.page09, name='page09'),
     path('estilo/page10', views.page10, name='page10'),
     path('estilo/page11', views.page11, name='page11'),
-    path('estilo/page12', views.page12, name='page12')
+    path('estilo/page12', views.page12, name='page12'),
+
 ]

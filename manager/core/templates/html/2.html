@@ -106,14 +106,14 @@
                                 
 
 
-                                <p class="text-muted mb-4"><h1>Calzado Unisex <br></h1><br><br>
-                                   <h1>Nike Fly By Mid 2<br></h1> <br><br>
+                                <p class="text-muted mb-4"><h1>Calzado {{ formulario.genero.value }}<br></h1><br><br>
+                                   <h1>{{ formulario.modelo.value }} <br></h1> <br><br>
                                     </p>
 
 
                                     <div class="rounded bg-gradient-3 text-white shadow p-4 text-center mb-5">
                                         <p>El precio de importacion es de:</p>
-                                        <div class="d-flex justify-content-center"> <p > $</p><p id="precio">71,30 dolares</p>
+                                        <div class="d-flex justify-content-center"> <p >US$</p><p id="precio">{{ formulario.precio.value }}</p>
                                         </div>
                                         
                                         <div class="rounded bg-warning text-dark shadow  text-center " id="cuadrito">  
