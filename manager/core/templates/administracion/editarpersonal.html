@@ -8,16 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static '../static/asserts/bootstrap/css/bootstrap.min.css' %}">
     <script src="{% static '../static/asserts/bootstrap/js/bootstrap.min.js' %}"></script>
-    <title>Document</title>
+    <title>Editar personal</title>
 </head>
 <body> 
     <div class="container">
         <div class="card">
             <div class="card-header">
-                <h4>Añadir al catalogo</h4>
+                <h4>Editar Personal</h4>
             </div>
             <div class="card-body">
-                <h4 class="card-title">Descripcion zapatilla</h4>
+                <h4 class="card-title">Datos personales</h4>
 
                 <form enctype="multipart/form-data" method="post">
                     {% csrf_token %} <!--Token de verificacion-->
@@ -27,13 +27,15 @@
                         <!--obtenemos el tipo de dato del campo-->
                         <input type="{{ campo.field.widget.input_type }}" class="form-control" 
                         name="{{ campo.name}}" id="" aria-describedby="helpId" 
-                        placeholder="{{ campo.label }}">
+                        placeholder="{{ campo.label }}"
+                        value="{{ campo.value | default:'' }}">
+                        
                     </div>
                     <!--Muestra los errores de validacion-->
                     <div class="col-12 help-text">{{ campo.errors }}</div>
                     {% endfor %}
                     <input name="" id="" class="btn btn-success" type="submit" value="Enviar información"></a>
-                    <a name="" id="" class="btn btn-primary" href="{% url 'inventario' %}" role="button">Cancelar</a>
+                    <a name="" id="" class="btn btn-primary" href="{% url 'personal' %}" role="button">Cancelar</a>
                 </form>
 
             </div>

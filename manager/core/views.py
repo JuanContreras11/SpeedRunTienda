@@ -4,6 +4,8 @@ from django.http import HttpResponse
 #indicamos desde que modelos recibiremos la informacion
 from .models import zapatilla
 from .forms import zapatillaForm
+from .models import Personal
+from .forms import PersonaForm
 
 # Definimos las vistas y su ubicacion
 
@@ -16,6 +18,7 @@ def login(request):
 def contacto(request):
     return render(request, 'contacto.html')
 
+#definicion y ubicacion del CRUD de INVENTARIO  
 def inventario(request):
     zapatillas = zapatilla.objects.all() #recibo en un objeto todos los atributos del modelo zapatilla
     return render(request, 'administracion/inventario.html', {'zapatillas': zapatillas}) # se le pasa el objeto a la variable en la vista
@@ -39,10 +42,33 @@ def eliminarInventario(request, id): #se debe solicitar el id
     zapatillas = zapatilla.objects.get(idZapatilla=id)
     zapatillas.delete()
     return redirect('inventario')
-        
-def personal(request):
-    return render(request, 'administracion/personal.html')
 
+#definicion y ubicacion del CRUD de personal    
+def personal(request):
+    persona = Personal.objects.all()
+    return render(request, 'administracion/personal.html', {'personal': persona})
+
+def agregarPersonal(request):
+    formulario = PersonaForm(request.POST or None, request.FILES or None)
+    if formulario.is_valid():
+        formulario.save()
+        return redirect('personal')
+    return render(request, 'administracion/agregarpersonal.html', {'formulario': formulario})
+
+def editarPersonal(request, id):
+    persona = Personal.objects.get(idPersona=id) #guarda en el objeto persona toda la fila del  la idPersona en el modelo
+    formulario = PersonaForm(request.POST or None, request.FILES or None, instance=persona) #le damos el id al formulario
+    if formulario.is_valid() and request.POST: 
+        formulario.save()
+        return redirect('personal')
+    return render(request, 'administracion/editarpersonal.html', {'formulario': formulario})
+
+def removerPersonal(request, id): #se debe solicitar el id
+    persona = Personal.objects.get(idPersona=id)
+    persona.delete()
+    return redirect('personal')
+        
+#deficion vistas del catalogo
 def page01(request):
     return render(request, 'html/1.html')
 

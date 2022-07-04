@@ -4,15 +4,26 @@ from .views import index, login, contacto
 
 #importamos las vistas e indicamos como se visualizaran en el sitio
 urlpatterns =[
+    #vistas principales
     path('', index, name='index'),
     path('login/', login, name='login'),
     path('contacto/', contacto, name='contacto'),
+
+    #vistas CRUD  inventario
     path('inventario/', views.inventario, name='inventario'),
     path('inventario/agregar', views.agregarInventario, name='agregarInventario'),
     path('inventario/editar', views.editarInventario, name='editarInventario'),
-    path('eliminarinventario/<int:id>', views.eliminarInventario, name='eliminarinventario'),
+    path('inventario/eliminar/<int:id>', views.eliminarInventario, name='eliminarinventario'),
     path('inventario/editar/<int:id>', views.editarInventario, name='editarinventario'),
-    path('rrhh/', views.personal, name='personal'),
+
+    #vistas CRUD  Personal
+    path('personal/', views.personal, name='personal'),
+    path('personal/agregar', views.agregarPersonal, name='agregarPersonal'),
+    path('personal/editar', views.editarPersonal, name='editarPersonal'),
+    path('personal/remover/<int:id>', views.removerPersonal, name='removerPersonal'),
+    path('personal/editar/<int:id>', views.editarPersonal, name='editarPersonal'),
+
+    #vistas páginas del catálogo
     path('estilo/page01', views.page01, name='page01'),
     path('estilo/page02', views.page02, name='page02'),
     path('estilo/page03', views.page03, name='page03'),
